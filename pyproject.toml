@@ -1,0 +1,16 @@
+[project]
+name = "sql-alchemy-lernen"
+version = "0.1.0"
+description = "Trying to learn sqlAlchemy using this video tutorial playlist: https://www.youtube.com/watch?v=Z2zD3EdjpNo&list=PLKm_OLZcymWhtiM-0oQE2ABrrbgsndsn0"
+authors = [
+    {name = "Sharon Bhosle",email = "sharon.bhosle@everestek.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "sqlalchemy (>=2.0.50,<3.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
