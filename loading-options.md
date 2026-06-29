@@ -148,3 +148,23 @@ Is query mein aapne `.join(User.addresses)` likha hai. Isse SQL mein `INNER JOIN
 
 
 
+___________________________________________
+
+Option: lazyload
+Kya karta hai? :   Zarurat padne par fetch karta hai.
+Performance Impact: N+1 ka khtra, latency badhti hai loops mein.
+
+Option: joinedload / selectinload
+Kya karta hai: Saath mein data utha lata hai.
+Performance Impact: Best hai agar aapko related data chahiye hi chahiye.
+
+Option: raiseload
+Kya karta hai?: Lazy load karne par Error deta hai.
+Performance Impact: Best for safety, taaki galti se query na fire ho.
+
+Option: load_only
+Kya karta hai? : Sirf selected columns lata hai.
+Performance Impact: Network payload aur RAM memory dono kam karta hai (Super Fast).
+
+Ek aur Option bhi hai called DEFER: 
+defer: Yeh load_only ka ulta hai. Agar aapko saare columns chahiye bas note jaisa bada text column nahi chahiye, toh aap use defer kar sakte ho: options(defer(Resource.note)).
